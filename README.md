@@ -18,6 +18,10 @@ cp .env.local .env
 docker-compose up -d
 # Migrate & seed only for the first time
 docker-compose exec api php artisan migrate --seed
+# If not working, please try to exec the api sh
+docker-compose exec api sh
+# then run
+php artisan migrate --seed
 ```
 
 ## Endpoint
@@ -31,6 +35,8 @@ Query params:
   - {Number} amountMin Example: 10
   - {Number} amountMax Example 2000
   - {String} currency Example AUD
+
+ex: http://localhost:8080/payment/transactions?provider=flypayA&statusCode=authorised&amountMin=10&amountMax=1000&currency=AUD
 ```
 
 ## Adding new payment provider:

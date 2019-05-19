@@ -36,7 +36,7 @@ Query params:
   - {Number} amountMax Example 2000
   - {String} currency Example AUD
 
-ex: http://localhost:8080/payment/transactions?provider=flypayA&statusCode=authorised&amountMin=10&amountMax=1000&currency=AUD
+ex: http://localhost:8080/payment/transactions?provider=flypayA&statusCode=authorised
 ```
 
 ## Adding new payment provider:

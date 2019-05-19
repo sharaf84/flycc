@@ -22,8 +22,7 @@ COPY . ./
 
 # prepare the app
 RUN set -eux; \
-	composer dump-autoload --classmap-authoritative --no-dev; \
-	chown -R www-data storage; \
-	php artisan migrate
+	composer dump-autoload --no-dev; \
+	chown -R www-data storage
 
 CMD ["php-fpm"]

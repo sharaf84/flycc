@@ -43,7 +43,7 @@ ex: http://localhost:8080/payment/transactions?provider=flypayA&statusCode=autho
 - Add a new JSON file to `storage/json/transactions/{FILE_NAME}.json`
 - Reuse `flypayATransactionSeeder` seeder class (duplicate and rename the file).
 - Update the new class setters.
-- Run the seeder `php artisan docker-compose exec api db:seed --class={NEW_CLASS_NAME}`
+- Run the seeder `docker-compose exec api php artisan db:seed --class={NEW_CLASS_NAME}`
 
 ## Notes:
 - I have not implemented pagination since records are already too few, but it's easy to implement since it's built in feature in Lumen.

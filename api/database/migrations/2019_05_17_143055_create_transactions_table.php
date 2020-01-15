@@ -1,9 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 use App\Models\Transaction;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateTransactionsTable extends Migration
 {
@@ -23,7 +23,7 @@ class CreateTransactionsTable extends Migration
             $table->string('order_reference', 50);
             $table->string('transaction_id', 50);
             /**
-             * Creating Indexes
+             * Creating Indexes.
              */
             $table->unique('transaction_id');
             $table->index('amount');
